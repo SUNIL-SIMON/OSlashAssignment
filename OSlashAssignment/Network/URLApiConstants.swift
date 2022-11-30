@@ -9,6 +9,6 @@ import Foundation
 class URLApiConstants
 {
     //This is where evrey api url respective to different features will be available
-    static var randomPhotoURL = "https://source.unsplash.com/random"
+    static var randomPhotoURL = "https://picsum.photos/"
     
 }

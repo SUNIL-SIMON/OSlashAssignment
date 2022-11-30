@@ -34,7 +34,9 @@ class Model
     func getRandomPhotos()
     {
         if fetchCycleCurrent <= fetchCycleLimit{
-            self.requestHandler.makeServerCall(urlString: URLApiConstants.randomPhotoURL, completion: {(data,resp,success) in
+            let randomWidth = Int.random(in: 2..<10)
+            let randomHeight = Int.random(in: 2..<10)
+            self.requestHandler.makeServerCall(urlString: "\(URLApiConstants.randomPhotoURL)\(randomWidth * 100)/\(randomHeight * 100)", completion: {(data,resp,success) in
                 print("photo fetch resp recieved")
                 if success{
                     DispatchQueue.main.async {
